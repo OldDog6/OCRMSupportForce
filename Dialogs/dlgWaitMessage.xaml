@@ -1,0 +1,17 @@
+﻿<Window x:Class="OCRMSupportForce.Dialogs.dlgWaitMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="dlgWaitMessage" Height="250" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="None" ContentRendered="Window_ContentRendered" >
+    <Grid >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" FrameworkElement.FlowDirection="RightToLeft">
+                <GradientStop Color="Black" Offset="0.913"/>
+                <GradientStop Color="White" Offset="0.337"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel>
+            <Image Name="WaitingImage" Source=" C:\Users\Paul\Documents\Visual Studio 2013\Projects\MvvM\OCRM\OCRMSupportForce\Resources\WaitImage.jpg" Height="85" Width="100" HorizontalAlignment="Left" />
+            <Label Name="Waitingtext" Content="While Salesforce provides the data..." VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,40,0,0" FontSize="14" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

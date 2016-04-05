@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="OCRMSupportForce.Views.DeduplicationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1500">
+    <Grid Background="#FF041952">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="GhostWhite" Margin="3" Grid.ColumnSpan="15" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding Path=ExecuteLoadMatchKeys}" Grid.ColumnSpan="2"  Grid.RowSpan="2" Content="Load Match Keys" Style="{DynamicResource RoundedButton}" VerticalAlignment="Center" Height="30" Margin="4" Background="LightSlateGray" Foreground="GhostWhite" FontSize="14" FontWeight="Bold"/>
+        </Grid>
+        
+        <Grid Background="GhostWhite" Margin="3" Grid.Row="2" Grid.ColumnSpan="15" Grid.RowSpan="8">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <DataGrid HorizontalAlignment="Left" Margin="0" Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="15" VerticalAlignment="Top" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Header="Finished" Binding="{Binding MyBool}"  Width="64"/>
+                        <DataGridTextColumn Header="Match Key" Binding="{Binding MyString}" Width="555"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+
+        <Grid Background="GhostWhite" Margin="3" Grid.Row="10" Grid.ColumnSpan="15" Grid.RowSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Matching Records" Grid.ColumnSpan="2" FontWeight="Bold" VerticalAlignment="Center" />
+            <DataGrid HorizontalAlignment="Left" Margin="0" Grid.Row="1" Grid.RowSpan="8" Grid.ColumnSpan="15" VerticalAlignment="Top" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Mark as Duplicate" Binding="{Binding MyBool}"  Width="144"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding MyString}" Width="255"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding MyString}" Width="355"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding MyString}" Width="155"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding MyString}" Width="195"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="15" Grid.RowSpan="1" Grid.ColumnSpan="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF007ACC"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Button Command="{Binding Path=Close}" Grid.Column="0" Content="Close" Style="{DynamicResource RoundedButton}" Height="32" Margin="4" Background="LightSlateGray" Foreground="GhostWhite" FontSize="14" FontWeight="Bold"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

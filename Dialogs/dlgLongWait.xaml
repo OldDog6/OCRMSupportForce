@@ -1,0 +1,36 @@
+﻿<Window x:Class="OCRMSupportForce.Dialogs.dlgLongWait"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="dlgLongWait" Height="380" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="None" ContentRendered="Window_ContentRendered">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF007ACC"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Image Name="WaitingImage" Grid.RowSpan="2" Source=" C:\Users\Paul\Documents\Visual Studio 2013\Projects\MvvM\OCRM\OCRMSupportForce\Resources\WaitImage.jpg" Height="80" Width="90" 
+               OpacityMask="#FFE85454" Opacity="0.8" HorizontalAlignment="Left" />
+        
+        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Foreground="AntiqueWhite" Content="This is a long running background process" />
+
+        <Label Name="DonorLabelName" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="12" Foreground="AntiqueWhite" />
+        <ProgressBar Name="DonorProgress" Maximum="100" Minimum="0" Grid.Row="4" VerticalAlignment="Top" Height="25" Margin="0,5,0,0" HorizontalAlignment="Center" Width="250"/>
+        
+        <Label Name="PaymentLabelName" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="12" Foreground="AntiqueWhite" />
+        <ProgressBar Name="PaymentProgress" Maximum="100" Minimum="0" Grid.Row="6" VerticalAlignment="Top" Height="25" Margin="0,5,0,0" HorizontalAlignment="Center" Width="250"/>
+
+    </Grid>
+</Window>

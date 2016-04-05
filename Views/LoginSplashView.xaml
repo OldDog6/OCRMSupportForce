@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="OCRMSupportForce.Views.LoginSplashView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="140" Margin="10,5,0,0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="6" VerticalAlignment="Top" Width="150" Source="/OCRMSupportForce;component/Resources/TinyStampLogo.png"/>
+        <Label Grid.Column="2" Content="OCRM SalesForce Auto Login" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" />
+        <Label x:Name="UserLabel" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" Content="{Binding Path=AsUserContext}" HorizontalAlignment="Left"/>
+        <Label x:Name="SessionIDLabel" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" Content="{Binding Path= AsSessionID}" HorizontalAlignment="Left"/>
+        <Label x:Name="ServerURLLabel" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" Content="{Binding Path= AsServerURL}" HorizontalAlignment="Left"/>
+        <Label x:Name="ConnectedLabel" Grid.Column="2" Grid.Row="4" Content="{Binding Path=SuccessfulLogin}" HorizontalAlignment="Left" FontWeight="Bold"/>
+        
+        <Label Grid.Column="6" Grid.Row="0" Content="On Premise DBMS Status" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" />
+        <Label Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="4" Content="{Binding Path=SqlConnectionStatus}" HorizontalAlignment="Left" FontWeight="Bold"/>
+        <Label Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="1" Content="{Binding Path=SqlUserName}" HorizontalAlignment="Left"/>
+        <Label Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="2" Content="{Binding Path=SqlServerPort}" HorizontalAlignment="Left"/>
+        <Label Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="3" Content="{Binding Path=SqlServerSchema}" HorizontalAlignment="Left"/>
+        
+
+
+        <TextBlock HorizontalAlignment="Left" Grid.Column="5" Margin="5,5,0,0" Grid.Row="7" Grid.RowSpan="11" TextWrapping="Wrap" Grid.ColumnSpan="4"  Text="{Binding Path=SqlErrorMessage}" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="7" Grid.RowSpan="11" TextWrapping="Wrap" Grid.ColumnSpan="5"  Text="{Binding Path=LoginErrorMessage}" VerticalAlignment="Top"/>
+        <!-- Button Controls -->
+        <Grid Grid.Row="21" Grid.RowSpan="2" Grid.ColumnSpan="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF007ACC"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button Command="{Binding Path=CloseLoginSplashWindow}" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1" Grid.Row="21" Content="Ok" Style="{DynamicResource RoundedButton}" Height="32" Margin="30,4,30,4" Background="LightSlateGray" Foreground="GhostWhite" FontSize="14" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</UserControl>
